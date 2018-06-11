@@ -12,12 +12,7 @@ export default class SearchBar extends Component {
             </div>
             <div className="search--bottom">
                 <div className="search--pacakge">
-                  <Package />
-                  <Package />
-                  <Package />
-                  <Package />
-                  <Package />
-                  <Package />
+                
                 </div>
             </div>
       </div>
