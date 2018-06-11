@@ -1,0 +1,21 @@
+.package-body {
+    color: --color;
+}
+
+.sidebar-inner {
+    padding-left: 20px;
+}
+
+.take-me-back {
+    margin-bottom: 20px;
+}
+
+.tags-container {
+    display: flex;
+}
+
+.tags-container .tag-b {
+    background: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    margin: 5px;
+}
