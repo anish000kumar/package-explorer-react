@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Router from 'tiny-react-router'
 import './index.css';
-import Home from './components/Home/Home';
 import registerServiceWorker from './registerServiceWorker';
+import routes from './routes'
 
-ReactDOM.render(<Home />, document.getElementById('root'));
+ReactDOM.render(<Router routes={routes} />, document.getElementById('root'));
 registerServiceWorker();
