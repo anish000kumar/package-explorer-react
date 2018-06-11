@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './SearchBar.css'
+import Package from './Package'
 
 export default class SearchBar extends Component {
   render() {
@@ -11,7 +12,7 @@ export default class SearchBar extends Component {
             </div>
             <div className="search--bottom">
                 <div className="search--pacakge">
-                
+                  <Package />
                 </div>
             </div>
       </div>
