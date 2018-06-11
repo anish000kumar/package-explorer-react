@@ -1,19 +1,5 @@
 
 
-:root {
-  /* colors */
-  --bg-color: rgb(0, 26, 59);
-  --color: #fff;
-
-  /* font sizes */
-  --font-xs: 10px;
-  --font-sm: 12px;
-  --font-md: 15px;
-  --font-lg: 20px;
-  --font-xl: 30px;
-  --font-xxl: 45px;
-}
-
 body {
   margin: 0;
   background: var(--bg-color);
@@ -23,9 +9,27 @@ body {
   height: 100vh;
   overflow: hidden;
   padding: 0;
+  font-weight: lighter;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
+}
+
+button{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0;
+  background-color: rgba(0,0,0,0.7);
+  font-size: var(--font-md);
+  font-weight: lighter;
+  letter-spacing: 2px;
+  cursor: pointer;
+  min-width: 130px;
+  text-align: center;
+  color: var(--color);
+}
+.mar-10{
+  margin: 10px;
 }
