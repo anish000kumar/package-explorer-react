@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 20px;
     flex:1;
 }
 
 .home--header{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .home--header .left{
@@ -16,7 +16,8 @@
 }
 
 .home--header .right{
-
+    display: flex;
+    align-items: center;
 }
 
 .home--body{

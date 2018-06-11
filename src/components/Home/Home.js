@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import SearchBar from './../SearchBar/SearchBar'
+import './Home.css'
 
 export default class Home extends Component {
   render() {
@@ -13,6 +15,7 @@ export default class Home extends Component {
                 </div>
             </div>
             <div className="right">
+              <SearchBar />
             </div>
           </div>
 
