@@ -6,6 +6,11 @@ export default class Home extends Component {
       <div className="explorer-home">
           <div className="home--header">
             <div className="left">
+                <div className="project-icon"></div>
+                <div className="project-data">
+                  <h3>Hello World</h3>
+                  <p>https://github.com/anish000kumar/he.git</p>
+                </div>
             </div>
             <div className="right">
             </div>

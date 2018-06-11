@@ -7,11 +7,12 @@
 }
 
 .home--header{
-
+    display: flex;
+    justify-content: space-between;
 }
 
 .home--header .left{
-
+    display: flex;
 }
 
 .home--header .right{
