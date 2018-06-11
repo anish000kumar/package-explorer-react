@@ -34,13 +34,47 @@
 }
 
 .home--body{
-
+    display: flex;
 }
 
 .home--body .sidebar{
+    padding-top: 40px;
+    min-height: 800px;
+    width: 300px;
+    box-sizing: border-box;
+    /* border-right: 2px solid rgba(255,255,255,0.2); */
+}
 
+.sidebar ul.key-list{
+    padding-left: 20px;
+    list-style: none;
+}
+
+.sidebar .key-list-item{
+    cursor: pointer;
+    transition: all 0.1s ease;
+    opacity: 0.3;
+    letter-spacing: 1px;
+    font-weight: 100;
+    padding: 10px;
+    background: rgba(0,0,0,0);
+    font-size: 15px;
+    /* text-align: right; */
+}
+.sidebar .key-list-item.active{
+    cursor: pointer;
+    opacity: 1;
+    background: rgba(0,0,0,0.2);
+    /* transform: scale(1.08); */
+    /* transform-origin: 0 0; */
 }
 
 .home--body .container{
-
+    flex: 1;
+    /* background: #000; */
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    box-sizing: border-box;
 }

@@ -1,8 +1,16 @@
 import React, { Component } from 'react'
 import SearchBar from './../SearchBar/SearchBar'
+import Dependencies from './../Dependencies/Dependencies';
 import './Home.css'
+import cn from 'classnames';
 
 export default class Home extends Component {
+
+  state = {
+    keys: [ 'Info', 'Dependencies', 'Dev Dependencies', 'Scripts', 'Help' ],
+    active_key: 'Info'
+  }
+
   render() {
     return (
       <div className="explorer-home">
@@ -21,8 +29,20 @@ export default class Home extends Component {
 
           <div className="home--body">
             <div className="sidebar">
+              <ul className='key-list'>
+                 {
+                   this.state.keys.map(key =>(
+                     <li 
+                     onClick={() => this.setState({active_key: key})}
+                     className={cn("key-list-item", {active: this.state.active_key==key})} > 
+                      {key} 
+                     </li>
+                   ))
+                 }
+              </ul>
             </div>
             <div className="container">
+                 <Dependencies />
             </div>
           </div>
       </div>

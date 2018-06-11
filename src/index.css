@@ -32,3 +32,15 @@ button{
 .mar-10{
   margin: 10px;
 }
+
+.search-input{
+  border: none;
+  font-size: var(--font-lg);
+  outline: none;
+  color: var(--color);
+  padding: 10px 20px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  width: 250px;
+  background: rgba(0,0,0,0.5);
+}

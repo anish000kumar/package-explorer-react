@@ -18,7 +18,7 @@
     letter-spacing: 1.5px;
 }
 
-.search--top .search--input{
+/* .search--top .search--input{
     border: none;
     font-size: var(--font-lg);
     outline: none;
@@ -28,7 +28,7 @@
     letter-spacing: 1px;
     width: 250px;
     background: rgba(0,0,0,0.5);
-}
+} */
 
 .search--bottom{
     width: 100%;
