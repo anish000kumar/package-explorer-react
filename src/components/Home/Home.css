@@ -9,10 +9,23 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.1);
 }
 
 .home--header .left{
     display: flex;
+}
+
+.home--header h3{
+    font-size: var(--font-xl);
+    margin: 0;
+    margin-bottom: 10px;
+}
+.home--header p{
+    font-size: var(--font-md);
+    margin: 0;
 }
 
 .home--header .right{
