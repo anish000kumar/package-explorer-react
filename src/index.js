@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Home from './components/Home/Home';
+import SearchBar from './components/SearchBar/SearchBar';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<Home />, document.getElementById('root'));
+ReactDOM.render(<SearchBar />, document.getElementById('root'));
 registerServiceWorker();
