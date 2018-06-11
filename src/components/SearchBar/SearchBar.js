@@ -8,7 +8,7 @@ export default class SearchBar extends Component {
       <div className="search--bar">
             <div className="search--top">
                 <div className="search--platform">npm</div>
-                <input type="text" className="search--input" placeholder="Search Packages"/>
+                <input type="text" className="search-input" placeholder="Search Packages"/>
             </div>
             <div className="search--bottom">
                 <div className="search--pacakge">

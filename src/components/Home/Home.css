@@ -52,7 +52,7 @@
 
 .sidebar .key-list-item{
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
     opacity: 0.3;
     letter-spacing: 1px;
     font-weight: 100;
@@ -72,8 +72,9 @@
 .home--body .container{
     flex: 1;
     /* background: #000; */
+    padding-top: 40px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     box-sizing: border-box;
 }

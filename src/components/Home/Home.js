@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SearchBar from './../SearchBar/SearchBar'
+import Dependencies from './../Dependencies/Dependencies';
 import './Home.css'
 import cn from 'classnames';
 
@@ -41,6 +42,7 @@ export default class Home extends Component {
               </ul>
             </div>
             <div className="container">
+                 <Dependencies />
             </div>
           </div>
       </div>
