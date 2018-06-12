@@ -11,7 +11,6 @@ class PackageDetail extends Component {
                         <div className="project-icon"></div>
                         <div className="project-data">
                             <h3>Hello World</h3>
-                            <p>https://github.com/anish000kumar/he.git</p>
                         </div>
                     </div>
                     <div className="right">

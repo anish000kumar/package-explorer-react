@@ -53,7 +53,7 @@ class SearchBar extends Component {
             <div className="search--bottom">
                 <div className="search--pacakge">
                   {
-                    this.state.suggestions.map(sug => <Package pkg={sug.package} />)
+                    this.state.suggestions.map(sug => <Package onClick={()=> this.props.onSelectPackage(sug.package) } pkg={sug.package} />)
                   }
                 </div>
             </div>
