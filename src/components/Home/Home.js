@@ -17,13 +17,19 @@ export default class Home extends Component {
 
   state = {
     active_tab:  { name: 'dependencies', label: 'Dependencies' },
-    active_repo: null
+    active_package: null
   }
 
   selectTab = (tab_name) =>{
     let tab = this.tabs.find(tab => tab.name==tab_name);
     this.setState({
       active_tab: tab
+    })
+  }
+
+  selectPackage = (pkg) =>{
+    this.setState({
+      active_package: pkg
     })
   }
 
@@ -40,7 +46,10 @@ export default class Home extends Component {
                 </div>
             </div>
             <div className="right">
-              <SearchBar />
+              <SearchBar 
+                onSelectPackage= {(pkg) => this.selectPackage(pkg)}
+                onClose={() => this.setState({active_package: null})}
+              />
             </div>
           </div>
 
@@ -62,8 +71,8 @@ export default class Home extends Component {
                  <ActiveTab/>
             </div>
           </div>
-          <div className="package--detail-popup ">
-              <PackageDetail />
+          <div className={cn("package--detail-popup", {active: this.state.active_package})}>
+              <PackageDetail pkg={this.state.active_package} />
           </div>
       </div>
     )
