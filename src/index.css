@@ -42,6 +42,7 @@ button{
   outline: none;
   color: var(--color);
   padding: 10px 20px;
+  border-bottom: 1px solid transparent;
   font-weight: lighter;
   letter-spacing: 1px;
   width: 250px;
