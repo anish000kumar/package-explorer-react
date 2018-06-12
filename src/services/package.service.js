@@ -9,7 +9,13 @@ if(!window.vscode){
           "react": "^16.4.0",
           "react-dom": "^16.4.0",
           "react-scripts": "1.1.4",
-          "tiny-react-router": "^1.0.2"
+          "tiny-react-router": "^1.0.2",
+          "axios": "^0.18.0",
+          "bootstrap-vue": "^2.0.0-rc.9",
+          "jquery": "^3.3.1",
+          "moment": "^2.22.1",
+          "nuxt": "^1.4.1",
+          "sweetalert2": "^7.20.10",
         },
         "devDependencies": {
             "babel": "^2.2.6",

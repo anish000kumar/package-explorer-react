@@ -5,12 +5,13 @@ import Dependencies from './../Dependencies/Dependencies';
 import './Home.css'
 import cn from 'classnames';
 import Tabs from '../../routes/tabs'
+import packageService from "../../services/package.service"
 
 export default class Home extends Component {
   tabs = [
-    { name: 'info', label: 'Info' },
-    { name: 'dependencies', label: 'Dependencies' },
-    { name: 'devDependencies', label: 'Dev Dependencies' },
+    { name: 'info', label: 'Info',  },
+    { name: 'dependencies', label: 'Dependencies', count: () => packageService.getDependencies().length },
+    { name: 'devDependencies', label: 'Dev Dependencies', count: ()=> packageService.getDevDependencies().length },
     { name: 'scripts', label: 'Scripts' },
     { name: 'help', label: 'Help' }
   ]
@@ -42,7 +43,7 @@ export default class Home extends Component {
                 <div className="project-icon"></div>
                 <div className="project-data">
                   <h3>Hello World</h3>
-                  <p>https://github.com/anish000kumar/he.git</p>
+                  <p>https://github.com/anish000kumar/hello-world.git</p>
                 </div>
             </div>
             <div className="right">
@@ -61,7 +62,7 @@ export default class Home extends Component {
                      <li 
                      onClick={() => this.setState({active_tab: tab})}
                      className={cn("key-list-item", {active: this.state.active_tab.name==tab.name})} > 
-                      {tab.label} 
+                      {tab.label} {tab.count? `(${tab.count()})`: null}
                      </li>
                    ))
                  }

@@ -5,7 +5,7 @@
 .dependency{
     width: 100%;
     display: flex;
-    padding: 5px 20px;
+    padding: 3px 20px;
     justify-content: space-between;
     align-items: center;
     background: rgba(255, 255, 255, 0.03);
@@ -13,19 +13,22 @@
 }
 
 .dependency--name{
-    font-size: var(--font-lg);
+    font-size: var(--font-md);
     letter-spacing: 1px;
     width: 30%;
+    color: #eee;
 }
 
 .dependency--version{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: var(--font-md);
+    color: #eee;
 }
 
 .dependency--version input.version{
-    width: 90px;
+    width: 120px;
     padding: 7px;
     margin-right: 10px;
     color: #fff;
@@ -61,7 +64,7 @@
 }
 
 .version-span{
-    width: 90px;
+    width: 120px;
     letter-spacing: 1.3px;
     padding: 7px;
     font-weight: 100;
