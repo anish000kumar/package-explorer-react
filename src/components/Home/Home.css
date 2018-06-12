@@ -84,3 +84,22 @@
     /* align-items: center; */
     box-sizing: border-box;
 }
+
+.package--detail-popup{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.package--detail-popup.active{
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: unset;
+    background: var(--bg-color);
+}

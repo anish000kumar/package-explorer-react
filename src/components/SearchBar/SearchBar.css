@@ -2,6 +2,7 @@
     width: 700px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .search--top{
@@ -40,6 +41,9 @@
     width: 100%;
     max-height: 600px;
     overflow-x: hidden;
+    position: absolute;
+    z-index: 10;
+    top: 45px;
     overflow-y: auto;
     background-color: rgb(22, 31, 54);
     box-shadow: -20px 20px 50px 0px rgba(0,0,0,0.3);
