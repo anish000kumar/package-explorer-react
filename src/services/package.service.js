@@ -11,6 +11,11 @@ if(!window.vscode){
           "react-scripts": "1.1.4",
           "tiny-react-router": "^1.0.2"
         },
+        "devDependencies": {
+            "babel": "^2.2.6",
+            "babel-lklk": "^16.4.0",
+            "webpack": "^16.4.0",
+          },
         "scripts": {
           "start": "react-scripts start",
           "build": "react-scripts build",
@@ -29,7 +34,8 @@ export default {
         repository: packageFile.repository && packageFile.repository.uri
     }),
     getDependencies: () => {
-        if(typeof packageFile.devDependencies  == 'object')
+        debugger
+        if(typeof packageFile.dependencies  == 'object')
             return Object.keys(packageFile.dependencies).map(key => ({
                         name: key,
                         version: packageFile.dependencies[key]

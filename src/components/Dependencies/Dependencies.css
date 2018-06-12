@@ -1,5 +1,5 @@
 .dependencies{
-    min-width: 600px;
+    min-width: 700px;
 }
 
 .dependency{
@@ -15,6 +15,7 @@
 .dependency--name{
     font-size: var(--font-lg);
     letter-spacing: 1px;
+    width: 30%;
 }
 
 .dependency--version{
@@ -28,14 +29,13 @@
     padding: 7px;
     margin-right: 10px;
     color: #fff;
-    background: rgba(0,0,0,0);
+    background: rgba(0,0,0,0.5);
     border: none;
     font-weight: 100;
     letter-spacing: 1.5px;
     font-size: var(--font-md);
 }
 .dependency--version input.version:focus{
-    background: rgba(0,0,0,0.5);
     outline: none;
 }
 
@@ -58,4 +58,22 @@
 .dependency--close{
     cursor: pointer;
     /* text-transform: lowercase; */
+}
+
+.version-span{
+    width: 90px;
+    letter-spacing: 1.3px;
+    padding: 7px;
+    font-weight: 100;
+}
+
+.no-package{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:30px;
+    font-weight: bolder;
+    letter-spacing: 1.3px;
+    opacity: 0.3;
 }
