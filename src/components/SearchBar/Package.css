@@ -3,6 +3,7 @@
     justify-content: space-between;
     padding: 10px;
     padding-bottom: 20px;
+    cursor: pointer;
     box-sizing: border-box;
     width: 100%;
     border-bottom: 2px solid rgba(255,255,255,0.1);
@@ -15,10 +16,11 @@
 .package--body h3.package--name{
     font-size: var(--font-lg);
     cursor: pointer;
-    letter-spacing: 1px;
-    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-weight: lighter;
     margin-top: 10px;
     margin-bottom: 0;
+    /* text-decoration: underline; */
 }
 .package--body h3.package--name small{
     font-size: var(--font-md);
