@@ -17,6 +17,12 @@
     line-height: 40px;
     letter-spacing: 1.5px;
 }
+@media(max-width: 1250px){
+    .search--top{
+        margin-top: 20px;
+        margin-left: unset;
+    }
+}
 
 /* .search--top .search--input{
     border: none;

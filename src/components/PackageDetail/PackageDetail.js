@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from './../SearchBar/SearchBar'
 import './PackageDetail.css'
+
 class PackageDetail extends Component {
     render() {
         return (
