@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./Script.css";
-import Script from './Script'
+import "./List.css";
+import ListItem from './ListItem'
 
 export default class items extends Component {
   state = {
@@ -22,7 +22,7 @@ export default class items extends Component {
         <div className="items-list">
           { (filtered_items && filtered_items.length> 0)
             ? filtered_items.map(item => (
-                <Script item={item} />
+                <ListItem item={item} />
               ))
             : <div className="no-package"> Nothing here! </div>}
         </div>

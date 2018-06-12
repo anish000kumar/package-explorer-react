@@ -33,12 +33,12 @@ if(!window.vscode){
 
 export default {
     getRawObject: () => packageFile,
-    getInfo: () => ({
-        name: packageFile.name,
-        version: packageFile.version,
-        private: packageFile.private,
-        repository: packageFile.repository && packageFile.repository.uri
-    }),
+    getInfo: () => [
+        {key: 'name', value: packageFile.name},
+        {key: 'version', value: packageFile.version},
+        {key: 'private', value: packageFile.private},
+        {key: 'repository', value: packageFile.repository && packageFile.repository.uri}
+    ],
     getDependencies: () => {
         debugger
         if(typeof packageFile.dependencies  == 'object')
