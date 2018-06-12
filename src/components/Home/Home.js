@@ -13,7 +13,7 @@ export default class Home extends Component {
     { name: 'dependencies', label: 'Dependencies', count: () => packageService.getDependencies().length },
     { name: 'devDependencies', label: 'Dev Dependencies', count: ()=> packageService.getDevDependencies().length },
     { name: 'scripts', label: 'Scripts' },
-    { name: 'help', label: 'Help' }
+    // { name: 'help', label: 'Help' }
   ]
 
   state = {

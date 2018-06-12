@@ -56,5 +56,12 @@ export default {
             }))
         return []
     },
-    getScripts: () => packageFile.scripts
+    getScripts: () => {
+        if(typeof packageFile.scripts  == 'object')
+        return Object.keys(packageFile.scripts).map(key => ({
+            key,
+            value: packageFile.scripts[key]
+        }))
+    return []
+    }
 }

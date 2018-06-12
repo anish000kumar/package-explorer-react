@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Script.css";
+import "./Scripts.css";
 import Script from './Script'
 
 export default class items extends Component {
