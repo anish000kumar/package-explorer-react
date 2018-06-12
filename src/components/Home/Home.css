@@ -5,6 +5,7 @@
     flex:1;
 }
 
+
 .home--header{
     display: flex;
     justify-content: space-between;
@@ -12,6 +13,11 @@
     padding: 20px;
     box-sizing: border-box;
     background: rgba(0,0,0,0.1);
+}
+@media(max-width: 1250px){
+    .home--header{
+        flex-direction: column;
+    }
 }
 
 .home--header .left{
@@ -38,7 +44,7 @@
 }
 
 .home--body .sidebar{
-    padding-top: 40px;
+    padding-top: 30px;
     min-height: 800px;
     width: 300px;
     box-sizing: border-box;

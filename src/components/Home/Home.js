@@ -3,15 +3,30 @@ import SearchBar from './../SearchBar/SearchBar'
 import Dependencies from './../Dependencies/Dependencies';
 import './Home.css'
 import cn from 'classnames';
+import Tabs from '../../routes/tabs'
 
 export default class Home extends Component {
+  tabs = [
+    { name: 'info', label: 'Info' },
+    { name: 'dependencies', label: 'Dependencies' },
+    { name: 'devDependencies', label: 'Dev Dependencies' },
+    { name: 'scripts', label: 'Scripts' },
+    { name: 'help', label: 'Help' }
+  ]
 
   state = {
-    keys: [ 'Info', 'Dependencies', 'Dev Dependencies', 'Scripts', 'Help' ],
-    active_key: 'Info'
+    active_tab:  { name: 'dependencies', label: 'Dependencies' }
+  }
+
+  selectTab = (tab_name) =>{
+    let tab = this.tabs.find(tab => tab.name==tab_name);
+    this.setState({
+      active_tab: tab
+    })
   }
 
   render() {
+    const ActiveTab = () => Tabs[this.state.active_tab.name];
     return (
       <div className="explorer-home">
           <div className="home--header">
@@ -31,18 +46,18 @@ export default class Home extends Component {
             <div className="sidebar">
               <ul className='key-list'>
                  {
-                   this.state.keys.map(key =>(
+                   this.tabs.map(tab =>(
                      <li 
-                     onClick={() => this.setState({active_key: key})}
-                     className={cn("key-list-item", {active: this.state.active_key==key})} > 
-                      {key} 
+                     onClick={() => this.setState({active_tab: tab})}
+                     className={cn("key-list-item", {active: this.state.active_tab.name==tab.name})} > 
+                      {tab.label} 
                      </li>
                    ))
                  }
               </ul>
             </div>
             <div className="container">
-                 <Dependencies />
+                 <ActiveTab/>
             </div>
           </div>
       </div>
