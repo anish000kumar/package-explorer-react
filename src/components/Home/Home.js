@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SearchBar from './../SearchBar/SearchBar'
+import PackageDetail from './../PackageDetail/PackageDetail'
 import Dependencies from './../Dependencies/Dependencies';
 import './Home.css'
 import cn from 'classnames';
@@ -15,7 +16,8 @@ export default class Home extends Component {
   ]
 
   state = {
-    active_tab:  { name: 'dependencies', label: 'Dependencies' }
+    active_tab:  { name: 'dependencies', label: 'Dependencies' },
+    active_repo: null
   }
 
   selectTab = (tab_name) =>{
@@ -59,6 +61,9 @@ export default class Home extends Component {
             <div className="container">
                  <ActiveTab/>
             </div>
+          </div>
+          <div className="package--detail-popup ">
+              <PackageDetail />
           </div>
       </div>
     )

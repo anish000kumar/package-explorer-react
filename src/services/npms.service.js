@@ -6,6 +6,7 @@ export default {
         query = query.split(' ').join('+');
         return axios.get(`${baseUrl}/suggestions?q=${query}`)
     },
+    
     getPackageDetail(pkg){
         return axios.get(`${baseUrl}/${pkg}`)
     }
