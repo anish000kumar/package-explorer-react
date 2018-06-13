@@ -41,6 +41,7 @@ const LeftAngle = () => (
     </svg>
   </div>
 );
+
 class PackageDetail extends Component {
   state = {
     pkg: null
@@ -48,13 +49,22 @@ class PackageDetail extends Component {
 
   onFocus() {
     debugger;
+    this.setState({
+        pkg:"<h4> Loading... </h4>"
+    });
     let pkg = this.props.pkg;
     if (pkg && !pkg.readme) {
-      npmService.getPackageDetail(pkg.name).then(res => {
+      npmService.getPackageDetail(pkg.name)
+      .then(res => {
         this.setState({
           pkg: res.data
         });
-      });
+      })
+      .catch(err => {
+        this.setState({
+            pkg: 'Something went wrong...'
+          });
+      })
     }
   }
 
@@ -71,11 +81,11 @@ class PackageDetail extends Component {
   };
 
   render() {
-    const pkg = this.state.pkg
+    const pkg = (this.state.pkg && this.state.pkg.collected)
       ? this.state.pkg.collected.metadata
       : this.props.pkg;
-    const github = this.state.pkg && this.state.pkg.collected.github;
-    const npm = this.state.pkg && this.state.pkg.collected.npm;
+    const github = this.state.pkg && this.state.pkg.collected && this.state.pkg.collected.github;
+    const npm = this.state.pkg && this.state.pkg.collected && this.state.pkg.collected.npm;
     return (
       <div className="package-detail">
         <div className="home--header">
@@ -155,7 +165,13 @@ class PackageDetail extends Component {
           </div>
           <div className="container main-container" style={{paddingTop:0}}>
             <div className="readme main-content">
-                {pkg && <Markdown source={pkg.readme} options={{html: true, highlight}}></Markdown>}
+                {pkg && 
+                pkg.readme?
+                <Markdown source={pkg.readme} options={{html: true, highlight}}></Markdown>:
+                <h4>
+                    No Readme
+                </h4>
+            }
             </div>
           </div>
         </div>
