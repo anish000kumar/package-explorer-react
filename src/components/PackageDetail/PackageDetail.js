@@ -17,7 +17,7 @@ class PackageDetail extends Component {
                     <div className="left">
                         <div className="project-icon"></div>
                         <div className="project-data" style={{display: 'flex'}}>
-                            <div className='back-btn' onClick=""> <LeftAngle/> </div>
+                            <div className='back-btn' onClick={this.props.onClose} > <LeftAngle/> </div>
                             <div className="project-detail">
                                 <h3>{pkg && pkg.name}
                                     <span style={{fontSize: '14px', paddingLeft: '5px'}}>({pkg && pkg.version})</span>

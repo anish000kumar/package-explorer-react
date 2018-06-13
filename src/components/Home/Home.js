@@ -73,7 +73,7 @@ export default class Home extends Component {
             </div>
           </div>
           <div className={cn("package--detail-popup", {active: this.state.active_package})}>
-              <PackageDetail pkg={this.state.active_package} />
+              <PackageDetail onClose={() => this.setState({active_package: null})} pkg={this.state.active_package} />
           </div>
       </div>
     )
