@@ -54,7 +54,10 @@ class PackageDetail extends Component {
                             </div>
 
                             <div className="links-container">
-                                <h5>Links:</h5>
+                                <h3>Links:</h3>
+                                <a href="#" className="link-box"> ↪ npm</a>
+                                <a href="#" className="link-box"> ↪ github</a>
+                                <a href="#" className="link-box"> ↪ website</a>
                             </div>
                         </div>
                         
