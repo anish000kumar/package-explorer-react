@@ -18,7 +18,7 @@ export default class Home extends Component {
 
   state = {
     active_tab:   { name: 'info', label: 'Info',  },
-    active_package: 1
+    active_package: null
   }
 
   selectTab = (tab_name) =>{
@@ -31,6 +31,8 @@ export default class Home extends Component {
   selectPackage = (pkg) =>{
     this.setState({
       active_package: pkg
+    },()=>{
+      this.pkgDetail.onFocus();
     })
   }
 
@@ -73,7 +75,7 @@ export default class Home extends Component {
             </div>
           </div>
           <div className={cn("package--detail-popup", {active: this.state.active_package})}>
-              <PackageDetail onClose={() => this.setState({active_package: null})} pkg={this.state.active_package} />
+              <PackageDetail ref={e => this.pkgDetail=e} onClose={() => this.setState({active_package: null})} pkg={this.state.active_package} />
           </div>
       </div>
     )
