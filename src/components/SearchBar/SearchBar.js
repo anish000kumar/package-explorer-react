@@ -9,7 +9,7 @@ class SearchBar extends Component {
 
   constructor(){
     super();
-    this.setSuggestions = debounce(this.setSuggestions, 300);
+    this.setSuggestions = debounce(this.setSuggestions, 250);
   }
 
   state = {

@@ -18,7 +18,7 @@ export default class Home extends Component {
 
   state = {
     active_tab:   { name: 'info', label: 'Info',  },
-    active_package: null
+    active_package: 1
   }
 
   selectTab = (tab_name) =>{

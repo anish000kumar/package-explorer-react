@@ -27,6 +27,22 @@ class PackageDetail extends Component {
                         </div>
                     </div>
                     <div className="right">
+                        <a href="" className="stat-box">
+                            <span>Monthly Downloads</span>
+                            <span>4350</span>
+                        </a>
+                        <a href="" className="stat-box">
+                            <span>★ Stars</span>
+                            <span>450</span>
+                        </a>
+                        <a href="" className="stat-box">
+                            <span>Forks</span>
+                            <span>34</span>
+                        </a>
+                        <a href="" className="stat-box">
+                            <span>Issues Open</span>
+                            <span>32</span>
+                        </a>
                     </div>
                 </div>
                 <div className="home--body">

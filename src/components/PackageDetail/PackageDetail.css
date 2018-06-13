@@ -10,6 +10,7 @@
 
 /* .project-data {
     display: flex;
+    width: 100%;
 } */
 
 .project-data .back-btn {
@@ -77,4 +78,28 @@
 
 p {
     margin-top: 0;
+}
+
+.right{
+    display: flex;
+    margin-left: auto;
+    margin-left: auto;
+}
+
+.right .stat-box{
+    display: flex;
+    margin-right: 10px;   
+    border-radius: 5px;
+    transform: scale(0.9);
+    text-decoration: none;
+    color: #fff;
+}
+
+.right .stat-box span{
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+.right .stat-box span:first-child{
+    background: rgba(255,255,255,0.2);
+    padding-right: 10px;
 }
