@@ -29,6 +29,42 @@
     color: rgba(255, 255, 255, 0.5);
 }
 
+.stats {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    /* padding: 5px; */
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.stats .count {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 12px;
+    padding: 0 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.stats .txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+.stats img {
+    height: 18px;
+    width: auto;
+    margin: 0 5px;
+}
+
 .sidebar-inner {
     padding-left: 20px;
     display: flex;
@@ -49,10 +85,17 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    
 }
 
-.links-container ul li span{
+.links-container ul li{
+    font-size: --font-md;
+    color: rgba(255,255,255, 0.5);
+}
+
+.links-container ul li a{
     font-size: 13px;
+    text-decoration: none;
 }
 li span:hover {
     cursor: pointer;

@@ -28,7 +28,27 @@ class PackageDetail extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="right">
+                        <div className="right pkg-detail-right">
+                            <div className="stats">
+                                <span className='count'>1500</span>
+                                <span className='txt'>Downloads</span>
+                                <img src={require('../../assets/download.svg')}/>
+                            </div>
+                            <div className="stats">
+                                <span className='count'>1500</span>
+                                <span className='txt'>stars</span>
+                                <img src={require('../../assets/star.svg')}/>
+                            </div>
+                            <div className="stats">
+                                <span className='count'>1500</span>
+                                <span className='txt'>Forks</span>
+                                <img src={require('../../assets/download.svg')}/>
+                            </div>
+                            <div className="stats">
+                                <span className='count'>1500</span>
+                                <span className='txt'>Open Issues</span>
+                                <img src={require('../../assets/download.svg')}/>
+                            </div>
                         </div>
                     </div>
                     <div className="home--body">
@@ -41,18 +61,22 @@ class PackageDetail extends Component {
                                 <div className="links-container">
                                     <h5>Links:</h5>
                                     <ul>
-                                        <li>Bugs:
-                                            <a href={pkg.links.bugs}>
+                                        <li>Bugs: <a href={pkg.links.bugs} target="_blank">
                                                 <span>{pkg && pkg.links.bugs || '---'}</span>
                                             </a>
                                         </li>
-                                        <li>HomePage:
-                                            <a href={pkg.links.homepage}>
+                                        <li>HomePage: <a href={pkg.links.homepage} target="_blank">
                                                 <span>{pkg && pkg.links.homepage || '---'}</span>
                                             </a>
                                         </li>
-                                        <li>NPM: <a href={pkg.links.npm}><span>{pkg && pkg.links.npm || '---'}</span></a></li>
-                                        <li>Repo: <a href={pkg.links.repository}><span>{pkg && pkg.links.repository || '---'}</span></a></li>
+                                        <li>NPM: <a href={pkg.links.npm} target="_blank">
+                                                <span>{pkg && pkg.links.npm || '---'}</span>
+                                            </a>
+                                        </li>
+                                        <li>Repo: <a href={pkg.links.repository} target="_blank">
+                                                <span>{pkg && pkg.links.repository || '---'}</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
