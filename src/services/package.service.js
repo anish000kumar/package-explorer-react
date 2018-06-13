@@ -9,7 +9,13 @@ if(!window.vscode){
           "react": "^16.4.0",
           "react-dom": "^16.4.0",
           "react-scripts": "1.1.4",
-          "tiny-react-router": "^1.0.2"
+          "tiny-react-router": "^1.0.2",
+          "axios": "^0.18.0",
+          "bootstrap-vue": "^2.0.0-rc.9",
+          "jquery": "^3.3.1",
+          "moment": "^2.22.1",
+          "nuxt": "^1.4.1",
+          "sweetalert2": "^7.20.10",
         },
         "devDependencies": {
             "babel": "^2.2.6",
@@ -27,12 +33,12 @@ if(!window.vscode){
 
 export default {
     getRawObject: () => packageFile,
-    getInfo: () => ({
-        name: packageFile.name,
-        version: packageFile.version,
-        private: packageFile.private,
-        repository: packageFile.repository && packageFile.repository.uri
-    }),
+    getInfo: () => [
+        {key: 'name', value: packageFile.name},
+        {key: 'version', value: packageFile.version},
+        {key: 'private', value: packageFile.private},
+        {key: 'repository', value: packageFile.repository && packageFile.repository.uri}
+    ],
     getDependencies: () => {
         debugger
         if(typeof packageFile.dependencies  == 'object')
@@ -50,5 +56,12 @@ export default {
             }))
         return []
     },
-    getScripts: () => packageFile.scripts
+    getScripts: () => {
+        if(typeof packageFile.scripts  == 'object')
+        return Object.keys(packageFile.scripts).map(key => ({
+            key,
+            value: packageFile.scripts[key]
+        }))
+    return []
+    }
 }

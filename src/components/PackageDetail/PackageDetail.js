@@ -17,6 +17,20 @@ class PackageDetail extends Component {
                         <SearchBar />
                     </div>
                 </div>
+                <div className="home--body">
+            <div className="sidebar">
+              <div className="sidebar-inner">
+                <div className="take-me-back"> <span>&#60;</span> react </div>
+                <div className="tags-container">
+                <div className="tag-b">-save</div>
+                <div className="tag-b">-save-dev</div>
+                </div>
+              </div>
+            </div>
+            <div className="container">
+                 hello there!
+            </div>
+          </div>
             </div>
         );
     }
