@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import SearchBar from './../SearchBar/SearchBar'
 import './PackageDetail.css'
 
+
+const LeftAngle = () => (
+<div>
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="#fff" width="30" height="65"  preserveAspectRatio="xMidYMid meet" viewBox="0 0 608 1280"><path d="M595 288q0 13-10 23L192 704l393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10L23 727q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z" fill="#fff"/></svg>
+</div>
+)
 class PackageDetail extends Component {
     render() {
         const pkg = this.props.pkg;
@@ -13,7 +19,7 @@ class PackageDetail extends Component {
                         <div className="left">
                             <div className="project-icon"></div>
                             <div className="project-data" style={{display: 'flex'}}>
-                                <div className='back-btn' onClick="">&#60;</div>
+                                <div className='back-btn' onClick=""><LeftAngle/></div>
                                 <div className="project-detail">
                                     <h3>{pkg && pkg.name}
                                         <span style={{fontSize: '14px', paddingLeft: '5px'}}>({pkg && pkg.version})</span>
