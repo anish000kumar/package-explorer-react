@@ -30,6 +30,9 @@ if(!window.vscode){
         }
       }
 }
+else {
+    packageFile = window.packageFile;
+}
 
 export default {
     getRawObject: () => packageFile,
@@ -40,7 +43,6 @@ export default {
         {key: 'repository', value: packageFile.repository && packageFile.repository.uri}
     ],
     getDependencies: () => {
-        debugger
         if(typeof packageFile.dependencies  == 'object')
             return Object.keys(packageFile.dependencies).map(key => ({
                         name: key,
@@ -48,6 +50,7 @@ export default {
                     }))
         return []
     },
+    
     getDevDependencies: () => {
         if(typeof packageFile.devDependencies  == 'object')
             return Object.keys(packageFile.devDependencies).map(key => ({
@@ -56,12 +59,26 @@ export default {
             }))
         return []
     },
+
     getScripts: () => {
         if(typeof packageFile.scripts  == 'object')
         return Object.keys(packageFile.scripts).map(key => ({
             key,
             value: packageFile.scripts[key]
         }))
-    return []
+        return []
+    },
+
+    updatePackageFile: (key, data) => {
+        if(window.fs && window.rootPath){
+            let pkgData = JSON.parse(JSON.stringify(packageFile));
+            pkgData.key = data;
+            window.fs.writeFile(window.rootPath+'/package.json', JSON.stringify(data, null, 4), function(err){
+                if(err){
+                    console.log(err)
+                }
+                console.log('file updated')
+            })
+        }
     }
 }
